@@ -1,0 +1,2 @@
+
+The program uses MPI_Bcast to broadcast a 1,000,000-element array from the root process to all processes. Each process calculates the sum of its assigned portion of the array. The partial sums are returned to the root process using MPI_Send and MPI_Recv, where they are combined to produce the final result. The program executed successfully on the Master and Worker nodes and produced the correct total sum of 500000500000
