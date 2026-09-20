@@ -1,1 +1,1 @@
-
+In Exercise 4, MPI_Gather and the manual summation loop were replaced with MPI_Reduce using the MPI_SUM operation. Each process contributed its local sum, and MPI automatically combined the values using a reduction operation. The final result was delivered directly to the root process, eliminating the need for additional computation on the root. The program produced the correct total sum of 500000500000, confirming the successful use of MPI_Reduce.
