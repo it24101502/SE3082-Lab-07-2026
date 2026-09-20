@@ -1,1 +1,2 @@
 
+In Exercise 3, the manual MPI_Send and MPI_Recv operations used for collecting partial sums were replaced with MPI_Gather. Each process sent its local sum to the root process using a single collective communication call. The root process stored the gathered values in an array and computed the final total by summing all collected partial results. The program produced the correct result of 500000500000, confirming the successful use of MPI_Gather.
