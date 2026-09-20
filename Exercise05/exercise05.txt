@@ -1,1 +1,2 @@
 
+In Exercise 5, MPI_Reduce was replaced with MPI_Allreduce. This collective communication operation performs the reduction and distributes the final result to every process. Each process received the global total sum and calculated its percentage contribution to the final result. Rank 0 contributed 25% while Rank 1 contributed 75% of the total sum. The final result was 500000500000, matching the expected value and confirming the correct operation of MPI_Allreduce.
