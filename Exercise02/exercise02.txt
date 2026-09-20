@@ -1,1 +1,2 @@
 
+n Exercise 2, MPI_Bcast was replaced with MPI_Scatter. The root process allocated the full array and distributed only the required chunk to each process. Each process computed the sum of its local chunk and returned the partial result to the root process using MPI_Send and MPI_Recv. This approach reduced memory usage because non-root processes stored only their assigned data. The final computed sum was 500000500000, which matched the expected value, confirming correct execution.
