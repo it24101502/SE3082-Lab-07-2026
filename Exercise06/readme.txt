@@ -1,1 +1,2 @@
 
+In Exercise 6, MPI_Scan was used to perform a prefix reduction operation. Each process received the cumulative sum of all local sums from rank 0 up to its own rank. The variable sum_before_me was calculated as prefix_sum - local_sum, representing the contribution of all lower-ranked processes. The last process received a prefix sum equal to the global total of 500000500000, confirming correct execution. The calculated prefix sums also matched the theoretical values obtained using the formula K(K+1)/2, validating the correctness of the implementation.
